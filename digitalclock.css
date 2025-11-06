@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #5f94ba, #ffcc70, #ff99cc, #66ff99);
+    background-size: 400% 400%;
+    animation: gradientShift 5s ease infinite;
+}
+
+.container{
+    width: 350px;      
+    height: 200px;     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;          
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3)
+}
+#clock{
+    font-size: 60px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    animation: glow 4s ease-in-out infinite alternate;
+
+}
+
+#date {
+  color: rgba(154, 38, 164, 0.9);
+  font-size: 28px;
+  margin: 0;
+  font-size: 40px;
+}
+
+@keyframes glow {
+    from{
+        text-shadow:0 0 10px rgb(12, 80, 80), 0 0 20px cyan;
+    }
+    to{
+        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    }
+
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
